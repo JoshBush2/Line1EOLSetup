@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Line 1 End of Line Setup Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        label, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        select, button {
+            padding: 10px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function redirectToPDF() {
+            var number = document.getElementById("numberSelection").value;
+            var pdfURL = "";
+
+            switch (number) {
+                case "1":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/P708%20Regular%20Cab%20Roof.pdf?csf=1&web=1&e=ZZkwd7";
+                    break;
+                case "2":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/P708%20Crew%20Cab%20Roof.pdf?csf=1&web=1&e=1eEHp8";
+                    break;
+                case "3":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/P708%20Super%20Cab%20Roof.pdf?csf=1&web=1&e=BGNSl7";
+                    break;
+                case "4":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/P708%20Super%20Cab%20DOP.pdf?csf=1&web=1&e=FVdwcK";
+                    break;
+                case "5":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/P708%20Crew%20Cab%20DOP.pdf?csf=1&web=1&e=ZQJmfI";
+                    break;
+                case "6":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U553%20Hood%20Outer.pdf?csf=1&web=1&e=csigz5";
+                    break;
+                case "7":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U553-4%20Solid-Moon%20Roof.pdf?csf=1&web=1&e=0VdD4g";
+                    break;
+                case "8":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U553-4%20DOP%20LWB-SWB.pdf?csf=1&web=1&e=qHAu9V";
+                    break;
+                case "9":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U553-4%20Liftgate.pdf?csf=1&web=1&e=rIA0Ph";
+                    break;
+                case "10":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U717-8%20Liftgate%20Inner.pdf?csf=1&web=1&e=XX9u7G";
+                    break;
+                case "11":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U717%20Liftgate%20Outer.pdf?csf=1&web=1&e=7OsNq3";
+                    break;
+                case "12":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U718%20Liftgate%20Outer.pdf?csf=1&web=1&e=1avf8Q";
+                    break;
+                case "13":
+                    pdfURL = "https://azureford.sharepoint.com/:b:/r/sites/KTP_Stamping/Production%20Docs/Project%20Management/Josh%20Bush/End%20of%20Line%20Setup/Line%201/U717-8%20Hood%20Inner.pdf?csf=1&web=1&e=Iy53xC";
+                    break;
+                // Add more cases as needed
+                default:
+                    alert("Please select a valid number.");
+                    return;
+            }
+
+            window.location.href = pdfURL;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Select a Number to View the PDF</h1>
+        <label for="numberSelection">Choose a number:</label>
+        <select id="numberSelection">
+            <option value="">Select...</option>
+            <option value="1">P708 Regular Cab Roof</option>
+            <option value="2">P708 Crew Cab Roof</option>
+            <option value="3">P708 Super Cab Roof</option>
+            <option value="4">P708 Super Cab DOP</option>
+            <option value="5">P708 Crew Cab DOP</option>
+            <option value="6">U553 Hood Outer</option>
+            <option value="7">U553-4 Solid-Moon Roof</option>
+            <option value="8">U553-4 DOP LWB-SWB</option>
+            <option value="9">U553-4 Liftgate</option>
+            <option value="10">U717-8 Liftgate Inner</option>
+            <option value="11">U717 Liftgate Outer</option>
+            <option value="12">U718 Liftgate Outer</option>
+            <option value="13">U717-8 Hood Inner</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button onclick="redirectToPDF()">View PDF</button>
+    </div>
+</body>
+</html>
